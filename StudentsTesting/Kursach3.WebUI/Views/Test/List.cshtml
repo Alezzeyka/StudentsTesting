@@ -1,0 +1,16 @@
+﻿@using Kursach3.WebUI.Models
+@using Kursach3.WebUI.HtmlHelpers
+@model TestListViewModel
+@{
+ViewBag.Title = "Тесты";
+}
+
+    
+    @foreach (var p in @Model.Tests)
+    {
+       @Html.Partial("TestSummary",p)
+    }
+    <div class="btn-group pull-right">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
+            new { page = x, category = Model.CurrentCategory }))
+    </div>

@@ -1,0 +1,10 @@
+﻿@model Kursach3Domain.Entities.TestPreview
+
+    <div class="well">
+        <h3>
+            <strong>@Model.Name</strong>
+            <span class="pull-right label label-primary">@Model.NumberOfQuestions.ToString("# Вопросов")</span>
+        </h3>
+        <span class="lead">@Model.DescriptionShort</span>
+        <p class="lead">@Model.Category @Model.Course.ToString("# класс")</p>
+    </div>
